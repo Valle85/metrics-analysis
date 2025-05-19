@@ -23,6 +23,7 @@ build:
                     - php-scrutinizer-run
 
         tests:
+            root_path: build
             commands:
                 - command: |
                     composer install --no-interaction --no-scripts --no-plugins
