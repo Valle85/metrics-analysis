@@ -23,11 +23,10 @@ build:
                     - php-scrutinizer-run
 
         tests:
-            root_path: build
             commands:
                 - command: |
                     composer install --no-interaction --no-scripts --no-plugins
-                    XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover=coverage.clover
+                    XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover=docs/coverage.clover
                   coverage:
-                      file: "coverage.clover"
+                      file: "docs/coverage.clover"
                       format: "php-clover"
