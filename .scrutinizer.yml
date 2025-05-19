@@ -19,7 +19,7 @@ build:
                 override:
                     - "composer install --no-interaction --no-scripts --no-plugins"
             tests:
-                commands:
+                override:
                     - php-scrutinizer-run
 
         tests:
