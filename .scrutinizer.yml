@@ -22,9 +22,9 @@ build:
                 override:
                     - php-scrutinizer-run
 
-    tests:
-        override:
-            - command: "composer phpunit"
-              coverage:
-                  file: "docs/coverage.clover"
-                  format: "php-clover"
+        tests:
+            override:
+                - command: "composer phpunit"
+                  coverage:
+                    file: "docs/coverage.clover"
+                    format: "php-clover"
