@@ -23,6 +23,9 @@ build:
                     - php-scrutinizer-run
 
         tests:
+            project_setup:
+                override:
+                    - "composer install --no-interaction --no-scripts --no-plugins"
             commands:
                 - command: "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover=docs/coverage.clover"
                   coverage:
