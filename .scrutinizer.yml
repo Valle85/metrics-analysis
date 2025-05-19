@@ -19,12 +19,9 @@ build:
                 override:
                     - "composer install --no-interaction --no-scripts --no-plugins"
             tests:
-                override:
+                commands:
                     - php-scrutinizer-run
 
         tests:
-            override:
-                - command: "composer phpunit"
-                  coverage:
-                    file: "docs/coverage.clover"
-                    format: "php-clover"
+            commands:
+                - "composer phpunit"
